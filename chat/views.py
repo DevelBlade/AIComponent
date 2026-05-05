@@ -47,25 +47,25 @@ class OllamaChatView(APIView):
                 },
             ]
 
-            estimate_resp = ollama.chat(
-                model=settings.OLLAMA_MODEL,
-                messages=estimation_prompt,
-                format={
-                    "type": "object",
-                    "properties": {
-                        "tokens": {"type": "number"},
-                    },
-                    "required": ["tokens"],
-                },
-                options={"temperature": 0},
-            )
+            # estimate_resp = ollama.chat(
+            #     model=settings.OLLAMA_MODEL,
+            #     messages=estimation_prompt,
+            #     format={
+            #         "type": "object",
+            #         "properties": {
+            #             "tokens": {"type": "number"},
+            #         },
+            #         "required": ["tokens"],
+            #     },
+            #     options={"temperature": 0},
+            # )
 
-            try:
-                estimate_json = json.loads(estimate_resp["message"]["content"])
-                estimated_tokens = int(estimate_json.get("tokens", 1000))
-            except Exception:
-                print("⚠️ Estimator failed, using fallback")
-                estimated_tokens = 1000
+            # try:
+                # estimate_json = json.loads(estimate_resp["message"]["content"])
+                # estimated_tokens = int(estimate_json.get("tokens", 1000))
+            # except Exception:
+            #     print("⚠️ Estimator failed, using fallback")
+            estimated_tokens = 1000
 
             estimated_tokens = max(300, min(estimated_tokens, 20000))
 

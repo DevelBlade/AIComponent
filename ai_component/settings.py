@@ -132,4 +132,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-OLLAMA_MODEL = "gemma3:12b"
+OLLAMA_MODEL = "qwen3:14b"
+ # qwen3:14b
+ # qwen2.5:14b
+ # phi4
+ # gemma3:12b
