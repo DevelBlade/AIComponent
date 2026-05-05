@@ -11,11 +11,13 @@ from rest_framework import status
 
 class OllamaChatView(APIView):
     def post(self, request):
-        print("🚀 Received prompt!")
+
 
         messages = request.data.get("messages")
         schema = request.data.get("schema")
         options = request.data.get("options", {"temperature": 0})
+
+        print(f"🚀 Received prompt: {messages}")
 
         if not messages:
             return Response(
