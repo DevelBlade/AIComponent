@@ -132,9 +132,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-OLLAMA_MODEL = "deepseek-r1:14b"
- # qwen3:14b
- # qwen2.5:14b
- # phi4
- # gemma3:12b
- # deepseek-r1:14b
+OLLAMA_MODEL = "gpt-oss:20b"
+ # qwen3:14b (slow start)
+ # qwen2.5:14b (mid)
+ # phi4 (not tested)
+ # gemma3:12b (mid)
+ # gemma4:e4b (unreliable)
+ # deepseek-r1:14b (slow start)
+ # deepseek-r1:8b (mid)
+ # mistral (fast/unreliable)
+ # phi3.5:3.8b (very fast/unreliable)
+ # llama3.1:8b (mid/unreliable)
+ # chevalblanc/gpt-4o-mini (mid/unreliable)
+ # gpt-oss:20b-cloud (very fast/reliable) (~250k tokens/h)
+ # gpt-oss:20b (not tested)
