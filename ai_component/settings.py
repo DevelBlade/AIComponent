@@ -132,8 +132,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-OLLAMA_MODEL = "qwen3:14b"
+OLLAMA_MODEL = "deepseek-r1:8b"
  # qwen3:14b
  # qwen2.5:14b
  # phi4
  # gemma3:12b
+ # deepseek-r1:14b
