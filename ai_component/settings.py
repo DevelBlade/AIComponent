@@ -132,7 +132,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-OLLAMA_MODEL = "gpt-oss:20b"
+OLLAMA_MODEL = "gpt-oss:20b-cloud"
  # qwen3:14b (slow start)
  # qwen2.5:14b (mid)
  # phi4 (not tested)
